@@ -1,0 +1,123 @@
+{
+  "dataset_rows": 344,
+  "class_counts": {
+    "Adelie": 152,
+    "Chinstrap": 68,
+    "Gentoo": 124
+  },
+  "missing_features": {
+    "bill_length_mm": 2,
+    "bill_depth_mm": 2,
+    "flipper_length_mm": 2,
+    "body_mass_g": 2
+  },
+  "train_rows": 275,
+  "test_rows": 69,
+  "features": [
+    "bill_length_mm",
+    "bill_depth_mm",
+    "flipper_length_mm",
+    "body_mass_g"
+  ],
+  "seed": 42,
+  "cv_folds": 5,
+  "selection_metric": "cv_f1_macro_mean",
+  "comparisons": [
+    {
+      "model": "K plus proches voisins",
+      "cv_f1_macro_mean": 0.9762197348575057,
+      "cv_f1_macro_std": 0.036724521545441736,
+      "cv_balanced_accuracy_mean": 0.9718181818181819,
+      "cv_accuracy_mean": 0.9818181818181818,
+      "test_f1_macro": 1.0,
+      "test_balanced_accuracy": 1.0,
+      "test_accuracy": 1.0
+    },
+    {
+      "model": "Régression logistique",
+      "cv_f1_macro_mean": 0.9689857535986363,
+      "cv_f1_macro_std": 0.032777784443789273,
+      "cv_balanced_accuracy_mean": 0.9663737373737373,
+      "cv_accuracy_mean": 0.9745454545454546,
+      "test_f1_macro": 1.0,
+      "test_balanced_accuracy": 1.0,
+      "test_accuracy": 1.0
+    },
+    {
+      "model": "Forêt aléatoire",
+      "cv_f1_macro_mean": 0.9504239990722645,
+      "cv_f1_macro_std": 0.037990032397202084,
+      "cv_balanced_accuracy_mean": 0.9482525252525253,
+      "cv_accuracy_mean": 0.96,
+      "test_f1_macro": 0.9828560296123126,
+      "test_balanced_accuracy": 0.9888888888888889,
+      "test_accuracy": 0.9855072463768116
+    },
+    {
+      "model": "Baseline majoritaire",
+      "cv_f1_macro_mean": 0.20485232067510548,
+      "cv_f1_macro_std": 0.002842234933609179,
+      "cv_balanced_accuracy_mean": 0.3333333333333333,
+      "cv_accuracy_mean": 0.44363636363636366,
+      "test_f1_macro": 0.20202020202020202,
+      "test_balanced_accuracy": 0.3333333333333333,
+      "test_accuracy": 0.43478260869565216
+    }
+  ],
+  "selected_model": "K plus proches voisins",
+  "class_labels": [
+    "Adelie",
+    "Chinstrap",
+    "Gentoo"
+  ],
+  "confusion_matrix": [
+    [
+      30,
+      0,
+      0
+    ],
+    [
+      0,
+      14,
+      0
+    ],
+    [
+      0,
+      0,
+      25
+    ]
+  ],
+  "classification_report": {
+    "Adelie": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 30.0
+    },
+    "Chinstrap": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 14.0
+    },
+    "Gentoo": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 25.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 69.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 69.0
+    }
+  }
+}
