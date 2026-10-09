@@ -1,6 +1,18 @@
 # PalmerMorphoBench
 
-**Benchmark de classification d'espèces à partir de mesures morphométriques.** Ce projet Python reproductible compare quatre classifieurs pour prédire l'espèce d'un manchot à partir de quatre mesures physiques. Le [notebook](notebooks/comparaison_modeles.ipynb) contient l'exploration, les métriques, une matrice de confusion et les conclusions.
+**Peut-on reconnaître l’espèce d’un manchot à partir de quatre mesures physiques ?** Ce projet Python compare une baseline et trois classifieurs sur les données Palmer Penguins. Il montre une démarche complète : préparation des données, sélection par validation croisée, évaluation sur un test séparé et reproductibilité.
+
+## Le projet en 30 secondes
+
+| | |
+| --- | --- |
+| **Données** | 344 observations, trois espèces, quatre mesures morphométriques |
+| **Évaluation** | Séparation stratifiée 80/20 ; sélection par validation croisée à cinq plis sur l’entraînement |
+| **Modèle retenu** | 7 plus proches voisins ; F1 macro moyen **0,976 ± 0,037** en validation croisée |
+| **Point de comparaison** | F1 macro moyen **0,205** pour la baseline majoritaire |
+| **Prudence** | Le test contient 69 observations ; les résultats ne démontrent pas une généralisation à d’autres lieux ou périodes |
+
+**Explorer le travail :** [notebook](notebooks/comparaison_modeles.ipynb) · [code de l’expérience](penguins_ml/experiment.py) · [résultats](results/metrics.json) · [tests](tests/test_experiment.py) · [CI](.github/workflows/ci.yml)
 
 ## Données et droits
 
